@@ -1,14 +1,16 @@
 import Home from './components/Home';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import DataProvider from './components/Context';
 
 function App() {
   return (
-    <><BrowserRouter>
+    <DataProvider>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={ <Home/>} />
       </Routes>
-    </BrowserRouter><Home /></>
-   
+    </BrowserRouter><Home />
+    </DataProvider>
   );
 }
 
