@@ -10,7 +10,7 @@ const DataProvider = ({children}) => {
 
     //hook que carga los datos desde el archivo JSON utilizando Axios
     useEffect(() => {
-        axios("https://github.com/benoitvallon/100-best-books.git").then((resp) => setData(resp.data))
+        axios("https://raw.githubusercontent.com/benoitvallon/100-best-books/master/books.json").then((resp) => setData(resp.data))
     }, []);
 
     //retorna componente envuelto en el contexto, para que sus hijos tengan acceso a la data
